@@ -9,6 +9,7 @@ export default {
 		extend: {
 			colors:{
 				"navbar-bg":"#323232",
+				"sidebar-bg":"#282828",
 			}
 		},	
 	},
