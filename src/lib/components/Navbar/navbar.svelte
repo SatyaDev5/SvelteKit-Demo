@@ -7,5 +7,5 @@
     <div class="bell flex items-center justify-center size-5">
         <Bell></Bell>
     </div>
-    <Avatar background="bg-white h-10 w-10"></Avatar>
+    <Avatar background="bg-white max-h-11 max-w-11"></Avatar>
 </nav>
