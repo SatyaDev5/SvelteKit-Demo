@@ -6,41 +6,47 @@
 	import Setting from './setting.svelte';
 </script>
 
-<div
-	class="sidebar bg-sidebar-bg flex flex-col w-60 fixed h-full text-sidebar-font justify-center items-center"
+<nav
+	class="sidebar bg-sidebar-bg flex flex-col w-60 fixed h-full text-sidebar-font items-center justify-between"
 >
-	<div class="title text-3xl m-8 font-space-grotesk-500 flex justify-center items-center gap-3">
-		<Estimaze></Estimaze>
-		<p>Estimaze</p>
+	<ul class="w-full">
+		<li class="w-full">
+			<div class="title text-3xl m-8 font-space-grotesk-500 flex justify-center items-center gap-3">
+				<Estimaze></Estimaze>
+				<p>Estimaze</p>
+			</div>
+		</li>
+		<div class="border-t border-sidebar-hr w-full"></div>
+		<li
+			class="nav-item flex font-space-grotesk-400 text-lg gap-3 justify-start items-center m-5 pl-2 w-full"
+		>
+			<DashBoard></DashBoard>
+			<p>Dashboard</p>
+		</li>
+		<div class="border-t border-sidebar-hr w-full"></div>
+		<li
+			class="nav-item flex font-space-grotesk-400 text-lg gap-3 justify-start items-center m-5 pl-2 w-full"
+		>
+			<Projects></Projects>
+			<p>Projects</p>
+		</li>
+		<div class="border-t border-sidebar-hr w-full"></div>
+		<li
+			class="nav-item flex font-space-grotesk-400 text-lg gap-3 justify-start items-center m-5 pl-2 w-full"
+		>
+			<Library></Library>
+			<p>Library</p>
+		</li>
+		<div class="border-t border-sidebar-hr w-full"></div>
+	</ul>
+	<div class="w-full mb-32">
+		<div class="border-t border-sidebar-hr w-full"></div>
+		<li
+			class="nav-item flex font-space-grotesk-400 text-lg gap-3 justify-start items-center m-5 pl-2 w-full"
+		>
+			<Setting></Setting>
+			<p>Settings</p>
+		</li>
+		<div class="border-t border-sidebar-hr w-full"></div>
 	</div>
-	<div class="border-t border-sidebar-hr w-full"></div>
-	<nav class="h-screen flex flex-col items-start font-space-grotesk-400 text-lg mr-10">
-		<ul class="">
-			<li class="flex flex-col">
-                <div class="flex gap-3 justify-start items-center m-5">
-                    <DashBoard></DashBoard>
-                    <p>Dashboard</p>
-                </div>
-                <div class="border-t border-sidebar-hr"></div>
-			</li>
-			<li class="flex gap-3 justify-start items-center m-5">
-				<Projects></Projects>
-				<p>Projects</p>
-			</li>
-			<div class="border-t border-sidebar-hr"></div>
-			<li class="flex gap-3 justify-start items-center m-5">
-				<Library></Library>
-				<p>Library</p>
-			</li>
-			<div class="border-t border-sidebar-hr w-full"></div>
-		</ul>
-        <div class="settings relative top-56">
-            <div class="border-t border-sidebar-hr w-full"></div>
-            <div class="flex gap-3 justify-start items-center m-5">
-                <Setting></Setting>
-                <p>Settings</p>
-            </div>
-            <div class="border-t border-sidebar-hr w-full"></div>
-        </div>
-	</nav>
-</div>
+</nav>
